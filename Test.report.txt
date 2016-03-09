@@ -1,0 +1,612 @@
+NAME: SIDDHARRTH PRIYADHARSAN M
+ROLL: 14CS10046
+
+Here is the test report of TestDate() which is main.cpp
+Date.h contains the classes and Date.cpp contains the implementation of the class functions and
+operators.
+
+
+
+ ---------------------------TestDate() Implementation-------------------------
+(A kind remainder: Dont use '/' in dates/dateformats. Use '-'.)
+
+Lets create some dateformats. Press enter to continue..
+
+Trying to set dd-0-yy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+06-March-16
+Dateformat hg = dd-0-yy successfully created..
+
+In order to check if the above format is set to all the dates, Lets create
+another date.
+Trying to create a new date test5 = 2-2-2013
+Using overloaded constructor2 DateFormat(char*) of Dateformat class...
+Above date created successfully.
+Trying to print the Date and Dateformat of test5 using getFormat().
+Date: 02-February-13
+Dateformat : dd-0-yy
+
+Trying to set d-mm-yy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+6-03-16
+Dateformat hg1 = d-mm-yy successfully created..
+
+Trying to set d-mmm-yyyy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+6-Mar-2016
+Dateformat hg2 = d-mmm-yyyy successfully created..
+
+Trying to set d-0-0 as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+6-March
+Dateformat hg3 = d-0-0 successfully created
+
+Trying to set dd-0-yyyy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+06-March-2016
+Dateformat hg4 = dd-0-yyyy successfully created..
+
+Trying to set dd-mmm-yy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+06-Mar-16
+Dateformat hg5 = dd-mmm-yy successfully created
+
+Trying to set 0-0-0 as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+March
+Dateformat hg6 = 0-0-0 successfully created
+
+Trying to set 0-mmm-yyyy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+Mar-2016
+Dateformat hg7 = 0-mmm-yyyy successfully created
+
+Trying to set d-m-yyyy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+6-3-2016
+Dateformat hg8 = d-m-yyyy successfully created
+
+Trying to set d-m-yy as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+6-3-16
+Dateformat hg9 = d-m-yy successfully created
+
+Trying to set dd-mmm-0 as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+06-Mar
+Dateformat hg10 = dd-mmm-0 successfully created
+
+Trying to set dd-mm-0 as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+06-03
+Dateformat hg11 = dd-mm-0 successfully created
+
+Trying to set 0-mmm-0 as dateformat..
+Using overloaded constructor1 DateFormat(char*,char*,char*) of Dateformat class.
+setFormat() function invoked.
+Trying to print today's date using the above format:
+Mar
+Dateformat hg12 = 0-mmm-0 successfully created
+
+
+Lets see the error cases in dateformats. Press Enter to continue.
+
+Trying to set dd/mm/yyyy as dateformat..
+Invalid dateformat error !!
+Usage of / in Dateformat is invalid.
+
+Trying to set dd-mm-yyy as dateformat..
+Invalid dateformat error!!
+Invalid Dateformat (year format invalidity)
+
+Trying to set ddd-mm-yyyy as dateformat..
+Invalid dateformat error !!
+Invalid Dateformat (day format invalidity)
+
+Trying to set dd-mm-yyyr as dateformat..
+Invalid dateformat error!!
+Invalid Dateformat (year format invalidity)
+
+Trying to set ddmmyy (without -) as dateformat..
+Invalid dateformat error !!
+Invalid Dateformat (Absence of -)
+
+Trying to set d-m-y  as dateformat..
+Invalid dateformat error !!
+Invalid Dateformat (year format invalidity)
+
+Trying to set d-mm-y  as dateformat..
+Invalid dateformat error!!
+Invalid Dateformat (year format invalidity)
+
+Trying to set DD-MM-YY (capital letters) as dateformat..
+Invalid argument error !!
+Invalid Dateformat (capital letters not allowed)
+
+None of the above are valid to be dateformat for the class Date. Press enter to
+proceed further..Lets keep dd-0-yyyy as the dateformat for the rest of the progr
+am.
+setFormat() function invoked.
+
+
+Let's check if the format is alloted for every object of Date class
+Creating a new date Jk: Day-3 Month-2 Year-2015
+Invoking the overloaded constructor1 Date::Date(Day d, Month m, Year y)..
+Using getFormat() function, we are trying to print the dateformat of Date Jk..
+Dateformat of Jk = dd-0-yyyy
+Jk: 03-February-2015
+
+
+Let's create some dates using this format. Press enter to continue.
+
+Trying to create a new date 29-2-2015 ..
+Domain error !!
+Invalid Date.
+
+Trying to create a new date 27-13-2013 ..
+Invalid argument error!!
+Invalid Date.
+
+Trying to create a new date 7-1-2050 ..
+Out of range error !!
+Invalid Date.
+
+Trying to create a new date 30-12-1949 ..
+Out of range error !!
+Invalid Date.
+
+Trying to create a new date 34-1-2000 ..
+Invalid argument error!!
+Invalid Date.
+
+Trying to create a new date 31-11-2000 ..
+Domain error !!
+Invalid Date.
+
+Trying to create a new date 30-2-2016 ..
+Domain error !!
+Invalid Date.
+
+Trying to create a new date 31-4-2003 ..
+Domain error !!
+Invalid Date.
+
+
+Let the user create a new date.
+Creating new date...
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+31-4-24
+Domain error !!
+Please try again..
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+30-4-24
+Date (t2): 30-April-2024
+Date successfully created !!
+
+Lets check the prefix and postfix operators. Press Enter to continue.
+
+       POSTFIX & PREFIX OPERATIONS ON DATES
+
+Postfix(++): Incrementing by 1 week.
+
+Trying to create a new date 12-1-2003 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : 19-January-2003
+
+Trying to create a new date 29-12-2025 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : 05-January-2026
+
+Trying to create a new date 28-2-2016 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : 06-March-2016
+
+Trying to create a new date 25-4-2033 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : 02-May-2033
+
+Lets see some exception cases..
+
+Trying to create a new date 28-12-2049 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : Out of range error !!
+
+Trying to create a new date 30-12-2049 ..
+New date created..Trying to use ++(postfix operator) on the above date..
+Resultant date : Out of range error !!
+
+Lets check the functioning of prefix(++). Press Enter to continue.
+
+Prefix(++): Incrementing by 1 day.
+
+Trying to create a new date 12-1-2003 ..
+New date created..Trying to use ++(prefix operator) on the above date..
+Resultant date : 13-January-2003
+
+Trying to create a new date 31-12-2025 ..
+New date created..Trying to use ++(prefix operator) on the above date..
+Resultant date : 01-January-2026
+
+Trying to create a new date 28-2-2016 ..
+New date created..Trying to use ++(prefix operator) on the above date..
+Resultant date : 29-February-2016
+
+Trying to create a new date 30-4-2033 ..
+New date created..Trying to use ++(prefix operator) on the above date..
+Resultant date : 01-May-2033
+
+Lets see some exception cases..
+
+Trying to create a new date 31-12-2049 ..
+New date created..Trying to use ++(prefix operator) on the above date..
+Resultant date : Out of range error !!
+
+Lets check the functioning of postfix(--). Press Enter to continue.
+
+Postfix(--): Decrementing by 1 week.
+
+Trying to create a new date 1-1-2003 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : 25-December-2002
+
+Trying to create a new date 3-3-1996 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : 25-February-1996
+
+Trying to create a new date 2-5-1970 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : 25-April-1970
+
+Trying to create a new date 25-4-2033 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : 18-April-2033
+
+Lets see some exception cases..
+
+Trying to create a new date 1-1-1950 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : Out of range error !!
+
+Trying to create a new date 3-1-1950 ..
+New date created..Trying to use --(postfix operator) on the above date..
+Resultant date : Out of range error !!
+
+Lets check the functioning of prefix(--). Press Enter to continue.
+
+Prefix(--): Decrementing by 1 day.
+
+Trying to create a new date 1-1-2003 ..
+New date created..Trying to use --(prefix operator) on the above date..
+Resultant date : 31-December-2002
+
+Trying to create a new date 3-12-2025 ..
+New date created..Trying to use --(prefix operator) on the above date..
+Resultant date : 02-December-2025
+
+Trying to create a new date 1-3-2016 ..
+New date created..Trying to use --(prefix operator) on the above date..
+Resultant date : 29-February-2016
+
+Trying to create a new date 30-4-2033 ..
+New date created..Trying to use --(prefix operator) on the above date..
+Resultant date : 29-April-2033
+
+Lets see some exception cases..
+
+Trying to create a new date 1-1-1950 ..
+New date created..Trying to use --(prefix operator) on the above date..
+Resultant date : Out of range error !!
+
+Lets check the functioning of operator+(int). Press Enter to continue.
+
+
+CHECKING OF operator+(int k)
+
+Trying to create a new date 2-1-2030 ..
+New date created.Let k=17
+Resultant date : 19-January-2030
+
+Trying to create a new date 27-12-2019 ..
+New date created.Let k=8
+Resultant date : 04-January-2020
+
+Trying to create a new date 1-1-2019 ..
+New date created.Let k=-10
+Resultant date : 22-December-2018
+
+Trying to create a new date 3-3-2016 ..
+New date created.Let k=-28
+Resultant date : 04-February-2016
+
+
+Let's see some exceptions for this operator.
+
+Trying to create a new date 19-12-2049 ..
+New date created.Let k=20
+Resultant date : Out of range error !!
+
+Trying to create a new date 12-1-1950 ..
+New date created.Let k=-15
+Resultant date : Out of range error !!
+
+Lets check the other operators. Press enter to continue.
+
+Checking of leapYear() function
+
+Check for 27-12-2016 :
+27-December-2016  is a leap year.
+Check for 7-2-2013 :
+07-February-2013  is not a leap year.
+
+Lets create another date (t4) to check LeapYear() function.
+Enter the date (t4) in any valid format you want (d-m-yy,dd-mm-yyyy....):
+3-6-2028
+Invoking the overloaded constructor2 of Date class..
+Date (t4): 03-June-2028
+Date successfully created !!
+
+Checking if Date (t4) is a leap year or not..
+03-June-2028 is a leap year.
+
+Lets check the functioning of operator-(Date). Press Enter to continue.
+
+
+CHECKING OF operator-(Date) :
+
+ Now, let's check the difference (no of days) between t3(12-2-2014) and t4.
+t3= 12-February-2014
+t4= 03-June-2028
+No of days between t3 and t4 = 5225
+
+Lets take another case..
+b1=12-1-2020 & b2=2-2-2020
+b1-b2= 21 days
+
+Lets go to next part (Binary relational operators). Press enter to continue.
+
+
+        CHECKING OF BINARY RELATIONAL OPERATORS
+
+Operator ==
+
+a1= 21-12-2010 & a2= 21-12-2010
+a1=a2 -> true.
+
+a11= 1-2-2010 & a12= 13-12-2010
+a11=a12 -> false.
+
+Operator !=
+
+a1= 21-12-2010 & a2= 21-12-2010
+a1!=a2 -> false.
+
+a11= 1-2-2010 & a12= 13-12-2010
+a11!=a12 -> true.
+
+Operator <
+
+a1= 21-12-2010 & a2= 21-12-2010
+a1<a2 -> false.
+
+a11= 1-2-2010 & a12= 13-12-2010
+a11<a12 -> true.
+
+Operator >
+
+a3= 21-1-2010 & a4= 2-12-2008
+a3>a4 -> true.
+
+a11= 1-2-2010 & a12= 13-12-2010
+a11>a12 -> false.
+
+Operator >=
+
+a3= 21-1-2010 & a4= 2-12-2008
+a3>=a4 -> true.
+
+a5= 1-2-2010 & a6= 1-2-2010
+a5>=a6 -> true.
+
+Operator <=
+
+a3= 21-1-2010 & a4= 2-12-2008
+a3<=a4 -> false.
+
+a15= 12-2-2010 & a16= 12-2-2010
+a15<=a16 -> true.
+
+Enter 2 dates for comparison (t5 & t6)
+Date t5:
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+30-3-1996
+Date (t5): 30-March-1996
+Date successfully created !!
+
+Date t6:
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+4-9-2001
+Date (t6): 04-September-2001
+Date successfully created !!
+
+Operator (=) :
+t5=t6 -> false.
+Operator (!=) :
+t5!=t6 -> true.
+Operator (<) :
+t5<t6 -> true.
+Operator (>) :
+t5>t6 -> false
+Operator (<=) :
+.t5<=t6 -> true
+Operator (>=) :
+t5>=t6 -> false
+
+Lets check out the cast operators. Press enter to continue.
+
+CAST OPERATORS
+Lets take Date td: 12-4-2010
+Month cast operator:
+April
+
+Lets take another date dy= 1-7-2016
+Month cast operator:
+July
+
+Lets take another date dy1= 12-12-1976
+Month cast operator:
+December
+
+
+WeekDay cast operator  :
+
+Lets take Date p5: 4-1-2016
+Weekday= Monday
+
+Lets take Date p6: 12-4-2015
+Weekday= Sunday
+
+Lets take Date p7: 20-3-2011
+Weekday= Sunday
+
+WeekNumber cast operator  :
+
+Lets take Date k5: 6-1-2016
+Week Number= 1
+
+Lets take Date k15: 2-1-2016
+Week Number= 53
+
+Lets take Date k18: 12-4-2010
+Week Number= 15
+
+Lets go to user's choice.. Press enter to continue.
+
+
+  USER'S CHOICE OF OPERATORS
+
+Create a new date (t7) to test any of the operators and functions of class Date:
+
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+23-5-26
+Date (t7): 23-May-2026
+Date successfully created !!
+
+Create a new date (t8) for comparison purposes :
+istream operator invoked
+Enter the date (Allowed formats: Day-d,dd; Month-m,mm; Year-yy,yyyy):
+23-5-26
+Date (t8): 23-May-2026
+Date successfully created !!
+
+List of relational operators related to Date class:
+-------------------------------------------------------
+1. leapyear() function on t7
+2. equal to operator(==)
+3. not equal to operator(!=)
+4. greater than operator(>)
+5. less than operator(<)
+6. less than or equal to operator(<=)
+7. greater than or equal to operator(>=)
+
+Enter the index (1-7) of your choice in the list
+1
+
+LeapYear():
+t7= 23-May-2026 is not a leap year.
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+7
+
+Operator >=
+t7= 23-May-2026
+t8= 23-May-2026
+t7>=t8 ->true
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+5
+
+Operator <
+t7= 23-May-2026
+t8= 23-May-2026
+t7<t8 ->false
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+6
+
+Operator <=
+t7= 23-May-2026
+t8= 23-May-2026
+t7<=t8 ->true
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+2
+
+Operator ==
+t7= 23-May-2026
+t8= 23-May-2026
+t7=t8 ->true
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+4
+
+Operator >
+t7= 23-May-2026
+t8= 23-May-2026
+t7>t8 ->false
+Enter Y to test another operator/function.
+y
+
+Enter the index (1-7) of your choice in the list
+3
+
+Operator !=
+t7= 23-May-2026
+t8= 23-May-2026
+t7!=t8 ->false
+Enter Y to test another operator/function.
+n
+                End of TestDate()
+                PRESS ENTER TO EXIT..
+
+
+Process returned 0 (0x0)   execution time : 449.484 s
+Press any key to continue.
