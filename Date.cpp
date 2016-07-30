@@ -1,5 +1,6 @@
 #include "Date.h"
 
+//Header files needed for the Date class
 #include <iostream>
 #include <cstdlib>
 #include <exception>
@@ -47,8 +48,6 @@ DateFormat::DateFormat()
 
 }
 
-
-
 //overloaded constructor 1
 DateFormat::DateFormat(const char* dateFormat1, const char* monthFormat1, const char* yearFormat1)
 {
@@ -65,8 +64,6 @@ DateFormat::DateFormat(const char* dateFormat1, const char* monthFormat1, const 
 	{
 		throw invalid_argument("Invalid format error !!\n");
 	}
-
-
 
 	if((strcmp(monthFormat1,"m")==0)||(strcmp(monthFormat1,"mm")==0)||(strcmp(monthFormat1,"mmm")==0)||(strcmp(monthFormat1,"0")==0)){
 
@@ -85,7 +82,6 @@ DateFormat::DateFormat(const char* dateFormat1, const char* monthFormat1, const 
 	{
 		throw invalid_argument("Invalid format error !!\n");
 	}
-
 
 }
 
@@ -507,14 +503,11 @@ DateFormat::DateFormat(const char* a)
 
 		}
 
-
-
-        else
+                    else
 			{
 				//throw error
 				throw invalid_argument("Invalid dateformat error !!\n");
 			}
-
 
 
     }
@@ -524,8 +517,6 @@ DateFormat::DateFormat(const char* a)
 		//throw error
 		throw invalid_argument("Invalid argument error !!\n");
 	}
-
-
 
 }
 //end of overloaded constructor 2
@@ -537,8 +528,6 @@ DateFormat::~DateFormat(){
     delete[] monthFormat;
     delete[] yearFormat;
     }
-
-
 
 
 //FUNCTIONS OF DATE CLASS
@@ -555,7 +544,6 @@ DateFormat Date::format;
    format=x;
 
 }
-
 
 //Destructor for Date class
 Date::~Date(){
@@ -1001,15 +989,11 @@ Date& Date::operator++(int)
         }
 
     }
-
-
-
 	day=(Day)d1;
 	month=(Month)m1;
 	year=y;
 
 	return *this;
-
 
 }
 
@@ -1077,15 +1061,11 @@ Date& Date::operator--()
         }
 
     }
-
-
-
 	day=(Day)d1;
 	month=(Month)m1;
 	year=y;
 
 	return *this;
-
 }
 
 
@@ -1154,16 +1134,11 @@ Date& Date::operator--(int) // Same day previous week
         }
 
     }
-
-
-
-
 	day=(Day)d1;
 	month=(Month)m1;
 	year=y;
 
 	return *this;
-
 }
 
 
@@ -1222,8 +1197,6 @@ unsigned int Date::operator-(const Date& otherDate) // Number of days between ot
     return abs(result);
 
 }
-
-
 
 Date Date::operator+(int noOfDays) // Day noOfDays after the current date
 
@@ -1380,8 +1353,6 @@ Date Date::operator-(int noOfDays) // Day noOfDays after the current date
 
 
 }
-
-
 
 //checking equality operator
 bool Date::operator==(const Date& otherDate)
@@ -1887,9 +1858,6 @@ bool Date::leapYear() const
 
 }
 
-
-
-
 //For getting the date of 1st day of week1
  Date Date::weekone(int year1) {
 
@@ -1968,9 +1936,6 @@ Date::operator WeekNumber() const // Cast to the week number of the year in whic
 
 }
 //End of WeekNumber cast operator
-
-
-
 
 
  Date::operator Month() const // Cast to the month of the year in which the current date falls
